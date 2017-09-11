@@ -1,0 +1,206 @@
+{
+    "questions": {
+      "name": "invertview_question",
+      "questionCount": 24,
+      "version":1,
+      "type": [
+        {
+          "name": "OOP",
+          "type":4,
+          "questions": [
+            {
+              "index": 22,
+              "question" : "Write basic concepts of OOPS?",
+              "answer": "Following are the concepts of OOPS and are as follows:<br/> <b>1. Abstraction.</b><br/>  <b>2. Encapsulation.</b><br/> <b>3. Inheritance.</b><br/>  <b>4. Polymorphism.</b>",
+              "favorite":false
+         
+            }
+          ]
+        },
+        {
+          "name": "J2EE",
+          "type": 1,
+          "questions": [
+            {
+              "index": 23,
+              "question" : " sdfsdf What is the name of the class that is super class for every class? ",
+              "answer": "  Object",
+              "favorite":false
+            },
+            {
+              "index": 1,
+              "question" : "  What is the name of the class that is super class for every class? ",
+              "answer": "  Object",
+              "favorite":false
+            },
+            {
+              "index": 2,
+              "question" : "Is it possible to extend the java.lang.String class",
+              "answer": "No. java.lang.String is declared as final. Class declared as final cannot be used as a parent class in inheritance.",
+              "favorite":false
+
+            },
+            {
+              "index": 3,
+              "question" : "What is the difference between a static and non-static method?",
+              "answer": "A static method is associated with the class as a whole rather than a specific instance of a class. Whereas a non – static method can be called only through an object. instance.",
+              "favorite":false
+
+            },
+            {
+              "index": 4,
+              "question" : "What is the purpose of garbage collection in java?",
+              "answer": "The purpose of garbage collection is to identify and discard objects that are no longer referenced by a program so that they can be reclaimed and reused.",
+              "favorite":false
+
+            },
+            {
+              "index": 5,
+              "question" : "How many public classes are permitted within a single java class file?",
+              "answer": "We can define only one public class within a single java class file.",
+              "favorite":false
+
+            },
+            {
+              "index": 6,
+              "question" : "What is the command line utility used to compile java source code into bytecode?",
+              "answer": "‘javac’ is the command line utility to compile java source code.",
+              "favorite":false
+
+            },
+            {
+              "index": 7,
+              "question" : "Why is the main() method always declared as a static method?",
+              "answer": "The main() method is declared as a static method so that it can be invoked without having to create an instance of the corresponding class.",
+              "favorite":false
+
+            },
+            {
+              "index": 8,
+              "question" : "What is an object wrapper?",
+              "answer": "An object wrapper is a set of java classes that are used to change basic data type such as int or float into Objects. </br> Eg. java.lang.Integer, java.lang.Float etc.",
+              "favorite":false
+
+            },
+            {
+              "index": 9,
+              "question" : "How are command line arguments passed in java?",
+              "answer": "The command line arguments are passed as an array of Strings. If the application requires some input in any particular data type format then the string passed should </br> be type casted to the required data type.",
+              "favorite":false
+
+            },
+            {
+              "index": 10,
+              "question" : "What are transient variables?",
+              "answer": "A transient variable is not stored as part of objects persistent state and they cannot be final or static.",
+              "favorite":false
+
+            }
+          ]
+        },
+        {
+          "name": "Hibernate",
+          "type":2,
+          "questions": [
+            {
+              "index": 11,
+              "question" : "What is ORM?",
+              "answer": "ORM stands for Object-Relational Mapping (ORM) is a programming technique for converting data between relational databases and object oriented programming languages such as Java, C# etc.",
+              "favorite":false
+         
+            },
+            {
+              "index": 12,
+              "question" : "Name some of the ORM frameworks based on JAVA.",
+              "answer": "There are several persistent frameworks and ORM options in Java.</br>Enterprise JavaBeans Entity Beans</br>Java Data Objects</br>Castor</br>TopLink</br>Spring DAO</br>Hibernate",
+              "favorite":false
+
+            },
+            {
+              "index": 13,
+              "question" : "What is Hibernate?",
+              "answer": "Hibernate is an Object-Relational Mapping(ORM) solution for JAVA and it raised as an open source persistent framework created by Gavin King in 2001. It is a powerful, high performance Object-Relational Persistence and Query service for any Java Application.</br>Hibernate maps Java classes to database tables and from Java data types to SQL data types and relieve the developer from 95% of common data persistence related programming tasks.",
+              "favorite":false
+
+            },
+            {
+              "index": 14,
+              "question" : "What are the advantages of using Hibernate?",
+              "answer": "Following are the advantages of using Hibernate.</br>Hibernate takes care of mapping Java classes to database tables using XML files and without writing any line of code.</br>Provides simple APIs for storing and retrieving Java objects directly to and from the database.</br>If there is change in Database or in any table then the only need to change XML file properties.</br>Abstract away the unfamiliar SQL types and provide us to work around familiar Java Objects.</br>Hibernate does not require an application server to operate.</br>Manipulates Complex associations of objects of your database.</br>Minimize database access with smart fetching strategies.</br>Provides Simple querying of data.",
+              "favorite":false
+
+            },
+            {
+              "index": 15,
+              "question" : "What is a SessionFactory in hibernate?",
+              "answer": "Configuration object is used to create a SessionFactory object which inturn configures Hibernate for the application using the supplied configuration file and allows for a Session object to be instantiated. The SessionFactory is a thread safe object and used by all the threads of an application.</br>The SessionFactory is heavyweight object so usually it is created during application start up and kept for later use. You would need one SessionFactory object per database using a separate configuration file. So if you are using multiple databases then you would have to create multiple SessionFactory objects.",
+              "favorite":false
+
+            },
+            {
+              "index": 16,
+              "question" : "What is Session in hibernate?",
+              "answer": "A Session is used to get a physical connection with a database. The Session object is lightweight and designed to be instantiated each time an interaction is needed with the database. Persistent objects are saved and retrieved through a Session object.</br>The session objects should not be kept open for a long time because they are not usually thread safe and they should be created and destroyed them as needed.",
+              "favorite":false
+
+            },
+            {
+              "index": 17,
+              "question" : "What is Transaction in hibernate?",
+              "answer": "A Transaction represents a unit of work with the database and most of the RDBMS supports transaction functionality. Transactions in Hibernate are handled by an underlying transaction manager and transaction (from JDBC or JTA).</br>This is an optional object and Hibernate applications may choose not to use this interface, instead managing transactions in their own application code." ,
+              "favorite":false
+
+            },
+            {
+              "index": 18,
+              "question" : "What is Query in hibernate?",
+              "answer": "Query objects use SQL or Hibernate Query Language (HQL) string to retrieve data from the database and create objects. A Query instance is used to bind query parameters, limit the number of results returned by the query, and finally to execute the query.",
+              "favorite":false
+
+            },
+            {
+              "index": 19,
+              "question" : "What is Criteria in hibernate?",
+              "answer": "Criteria object are used to create and execute object oriented criteria queries to retrieve objects.",
+              "favorite":false
+
+            },
+            {
+              "index": 20,
+              "question" : "What are the three states of a persistent entity at a given point in time?",
+              "answer": "Instances may exist in one of the following three states at a given point in time:<br/><b>transient:</b> A new instance of a a persistent class which is not associated with a Session and has no representation in the database and no identifier value is considered transient by Hibernate.<br/><b>persistent:</b> You can make a transient instance persistent by associating it with a Session. A persistent instance has a representation in the database, an identifier value and is associated with a Session.</br><b>detached:</b> Once we close the Hibernate Session, the persistent instance will become a detached instance.",
+              "favorite":false
+
+            }
+          ]
+        },
+        {
+          "name": "DataBase",
+          "type":3,
+          "questions": [
+            {
+              "index": 21,
+              "question" : "What is RDBMS ?",
+              "answer": "Relational Database Management system (RDBMS) is a database management system (DBMS) that is based on the relational model. Data from relational database can be accessed or reassembled in many different ways without having to reorganize the database tables. Data from relational database can be accessed using an API , Structured Query Language (SQL).",
+              "favorite":false
+         
+            },
+            {
+              "index": 23,
+              "question" : " What is SQL ?",
+              "answer": "Structured Query Language(SQL) is a language designed specifically for communicating with databases. SQL is an ANSI (American National Standards Institute) standard.",
+              "favorite":false
+         
+            },
+            {
+              "index": 24,
+              "question" : " What are the different type of SQL's statements ?",
+              "answer": "This is one of the most frequently asked SQL Interview Questions for freshers. SQL statements are broadly classified into three. They are <br/> <b> DDL – Data Definition Language: </b> DDL is used to define the structure that holds the data. For example, Create, Alter, Drop and Truncate table. <br/> <b> 2. DML – Data Manipulation Language: </b> DML is used for manipulation of the data itself. Typical operations are Insert, Delete, Update and retrieving the data from the table. The Select statement is considered as a limited version of the DML, since it can't change the data in the database. But it can perform operations on data retrieved from the DBMS, before the results are returned to the calling function. <br/> <b> DCL – Data Control Language: </b>  DCL is used to control the visibility of data like granting database access and set privileges to create tables, etc. Example - Grant, Revoke access permission to the user to access data in the database. ",
+              "favorite":false
+         
+            }
+          ]
+        }
+      ]
+    }
+  }

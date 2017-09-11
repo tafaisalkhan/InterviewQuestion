@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu" ></ion-icon>
+    </button>
+    <ion-title>{{name}} Question List </ion-title>
+
+    <ion-buttons end>
+
+
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="padding: 20px; ">
+  
+            <div >
+  
+ 
+            <ion-card *ngFor="let item of item.questions; let i = index"  >
+        
+             <ion-card-header style="padding: 0px; " [ngClass]="platform=='small'? 'detail-small-font' : 'detail-large-font'">
+                <ion-toolbar  [ngClass]="platform=='small'? 'detail-small-font' : 'detail-large-font'">
+                    <ion-buttons start  (tap)="shareQuestion(item.index, type, item)">
+                        <button ion-button icon-only >
+                            <ion-icon name="share"></ion-icon>
+                          
+                        </button>
+                      </ion-buttons>  
+                    <ion-title [ngClass]="platform=='small'? 'toolbar-title-small-font' : 'toolbar-title-large-font'" > Question {{i+1}} </ion-title>
+                    
+                    <ion-buttons end *ngIf="item.favorite " (tap)="unFavorite(item.index)" >
+                        <button ion-button icon-only >
+                           
+                            <ion-icon name="star"  (click)="favorite()"></ion-icon>
+                        </button>
+                      </ion-buttons> 
+                      <ion-buttons end *ngIf="!item.favorite" (tap)="favorite(item.index)">
+                          <button ion-button icon-only >
+                              <ion-icon name="star-outline"></ion-icon>
+                            
+                          </button>
+                        </ion-buttons>  
+
+                  </ion-toolbar>
+
+ 
+                  
+             
+            </ion-card-header>
+        
+
+              
+              <ion-card-content>
+              <br/>
+               <p [style.font-size]="sizeStore" [ngClass]="platform=='small'? 'p-medium-font' : 'p-large-font'" [innerHTML]="item.question"> 
+              <!--  <p style= "font-size: xx-large"> -->
+            
+                   
+                
+                </p>
+                <br/>
+                <p [style.font-size]="sizeStore" [innerHTML]="item.answer"> 
+                  
+                   
+              </ion-card-content>
+        
+            </ion-card>
+          </div> 
+  
+     
+  </ion-content>
