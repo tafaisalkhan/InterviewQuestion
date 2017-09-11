@@ -7,12 +7,7 @@ import { Storage } from '@ionic/storage';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { Observable } from 'rxjs/Observable';
 
-/**
- * Generated class for the QuestionListComponent component.
- *
- * See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
- * for more info on Angular Components.
- */
+
 @Component({
   selector: 'question-list',
   templateUrl: 'question-list.html'
@@ -35,7 +30,6 @@ export class QuestionListComponent {
 
   loadQuestion(){
     this.platform = this.questionConstantProvider.device;
-    //this.storage.set('favoriteArrayStore', null);
     this.storage.get('favoriteArrayStore').then((val) => {
       if (val != null){
         this.favoriteArray =  val;
@@ -44,8 +38,7 @@ export class QuestionListComponent {
           if(i >= 0){
               item.favorite = true;
           }
-          console.log(item);
-          console.log(i);
+         
         }
       }
     });
@@ -61,9 +54,9 @@ export class QuestionListComponent {
 
   }
   unFavorite(index){
-    //this.favoriteArray.slice(this.duaIndex);
+    
     var i = this.favoriteArray.indexOf(index);
-    //this.favoriteArray = this.favoriteArray.splice(this.duaIndex, 1)
+ 
     if(i != -1) {
       this.favoriteArray.splice(i, 1);
     }

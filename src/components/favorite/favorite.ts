@@ -11,13 +11,6 @@ import { InterviewServiceProvider } from '../../providers/interview-service/inte
 import { InterviewConstantProvider } from '../../providers/interview-constant/interview-constant';
 import {QuestionDataProvider } from '../../providers/question-data/question-data';
 
-
-/**
- * Generated class for the FavoriteComponent component.
- *
- * See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
- * for more info on Angular Components.
- */
 @Component({
   selector: 'favorite',
   templateUrl: 'favorite.html'
@@ -53,13 +46,12 @@ export class FavoriteComponent {
             this.sizeStore =  val;
           }
         });
-       
+
+       //Check for favorite
         this.storage.get('questionList').then((val) => {
           if (val != null){
             this.itemsQuestion =  val;
             for(let question in this.itemsQuestion){
-              //console.log(question);
-              //console.log(this.itemsQuestion[question]);
               var questionData = new QuestionDataProvider();
               questionData.name = this.itemsQuestion[question].name;
               questionData.questions = [];
@@ -73,9 +65,6 @@ export class FavoriteComponent {
                   
               }
               this.itemsFavoite.push(questionData);
-              
-             
-
             }
             console.log(this.itemsFavoite);
            
@@ -88,9 +77,9 @@ export class FavoriteComponent {
     }
   
   unFavorite(index){
-    //this.favoriteArray.slice(this.duaIndex);
+   
     var i = this.favoriteArray.indexOf(index);
-    //this.favoriteArray = this.favoriteArray.splice(this.duaIndex, 1)
+    
     if(i != -1) {
       this.favoriteArray.splice(i, 1);
     }
@@ -101,8 +90,7 @@ export class FavoriteComponent {
           temp[0][0].favorite = false;
         }
     }
-    //var temp = this.item.questions.filter(question => question.index == index);
-    //temp[0].favorite = false;
+    
     this.storage.set('favoriteArrayStore', this.favoriteArray);
   }
 
@@ -116,8 +104,7 @@ export class FavoriteComponent {
         temp[0][0].favorite = true;
       }
   }
-   // var temp = this.item.questions.filter(question => question.index == index);
-   // temp[0].favorite = true;
+  
     
   }
 

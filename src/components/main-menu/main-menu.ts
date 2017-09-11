@@ -6,12 +6,7 @@ import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';
 import { Storage } from '@ionic/storage';
 import { QuestionListComponent } from "../question-list/question-list";
 
-/**
- * Generated class for the MainMenuComponent component.
- *
- * See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
- * for more info on Angular Components.
- */
+
 @Component({
   selector: 'main-menu',
   templateUrl: 'main-menu.html'
@@ -28,27 +23,8 @@ export class MainMenuComponent {
   
   }
 
-
-
 loadDua(){
-  //check for local storage
-  /*this.questionServiceProvider.getQuestion()
-  .subscribe(data => {
-      this.dataList = data['questions'].type ;
-      //this.version = data[0].version;
-      console.log(this.dataList);
-      this.storage.set('questionList', this.dataList);
-      //this.storage.set('version', data[0].version);
-      debugger;
-
-    },
-  (err) => {console.log(err);
-
-
-    }
-    );*/
- 
-    this.storage.set('questionList', null);
+    //this.storage.set('questionList', null);
     this.storage.get('questionList').then((val) => {
       if (val != null){
         this.dataList =  val;
@@ -62,14 +38,8 @@ loadDua(){
             this.version = data['questions'].version;
             console.log(this.dataList);
             this.storage.set('questionList', this.dataList);
-            //this.storage.set('version', data[0].version);
-            debugger;
-      
-  
             },
-          (err) => {console.log(err);
-        
-        
+          (err) => {console.log(err);      
             }
             );
           }
@@ -86,14 +56,12 @@ loadDua(){
             console.log(this.dataList);
             this.storage.set('questionList', this.dataList);
             this.storage.set('version', data['questions'].version);
-            debugger;
+
           }
-           
-  
+
           },
         (err) => {console.log(err);
-      
-      
+           
           }
           );
         
