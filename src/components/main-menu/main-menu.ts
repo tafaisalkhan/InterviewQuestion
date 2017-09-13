@@ -24,20 +24,75 @@ export class MainMenuComponent {
   }
 
 loadDua(){
-    this.storage.set('questionList', null);
+
+  this.questionServiceProvider.getQuestionListVersion()
+  .subscribe(data => {
+      console.log('firebase data');
+      console.log(data);
+    
+     
+
+    },
+  (err) => {console.log(err);
+
+
+    }
+    );
+
+ /*this.questionServiceProvider.getQuestionList()
+  .subscribe(data => {
+      console.log('firebase data');
+      console.log(data);
+     console.log(data[0].type) ;
+    console.log(data[0].version);
+     
+
+    },
+  (err) => {console.log(err);
+
+
+    }
+    );*/
+   // this.storage.set('questionList', null);
     this.storage.get('questionList').then((val) => {
       if (val != null){
         this.dataList =  val;
+        this.storage.get('version').then((val) => {
+          if (val != null){
+            this.version =  val;
+    
+            this.questionServiceProvider.getQuestionList()
+            .subscribe(data => {
+              if(this.version != data[0].version){
+                this.dataList = data[0].type ;
+                this.version = data[0].version;
+                this.storage.set('questionList', this.dataList);
+                this.storage.set('version', data[0].version);
+              }
+            
+              },
+            (err) => {console.log(err);      
+              }
+              );
+           
+          }
+         
+        });
         
       }
       else
       {
-        this.questionServiceProvider.getQuestion()
+       //this.questionServiceProvider.getQuestion()
+      this.questionServiceProvider.getQuestionList()
           .subscribe(data => {
-            this.dataList = data['questions'].type ;
-            this.version = data['questions'].version;
-            console.log(this.dataList);
+            //this.dataList = data['questions'].type ;
+            //this.version = data['questions'].version;
+            //console.log(this.dataList);
+
+           this.dataList = data[0].type ;
+            this.version = data[0].version;
             this.storage.set('questionList', this.dataList);
+            this.storage.set('version', data[0].version);
             },
           (err) => {console.log(err);      
             }
@@ -45,29 +100,7 @@ loadDua(){
           }
     });
 
-    this.storage.get('version').then((val) => {
-      if (val != null){
-        this.version =  val;
-        this.questionServiceProvider.getQuestion()
-        .subscribe(data => {
-          if (this.version != data['questions'].version){
-            this.dataList = data['questions'].type ;
-            this.version = data['questions'].version;
-            console.log(this.dataList);
-            this.storage.set('questionList', this.dataList);
-            this.storage.set('version', data['questions'].version);
 
-          }
-
-          },
-        (err) => {console.log(err);
-           
-          }
-          );
-        
-      }
-     
-    });
     if (this.plt.is('iphone')) {
       // This will only print when on iOS
       console.log('I am an mobile device!');

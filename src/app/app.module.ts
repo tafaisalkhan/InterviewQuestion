@@ -22,6 +22,18 @@ import { InterviewConstantProvider } from '../providers/interview-constant/inter
 import { InterviewServiceProvider } from '../providers/interview-service/interview-service';
 import { Media, MediaObject } from '@ionic-native/media';
 import { QuestionDataProvider } from '../providers/question-data/question-data';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyD0ltyYRTTAHAWKPImdrmx6h4pfvXLWVso",
+  authDomain: "interview-question-28b0a.firebaseapp.com",
+  databaseURL: "https://interview-question-28b0a.firebaseio.com",
+  projectId: "interview-question-28b0a",
+  storageBucket: "interview-question-28b0a.appspot.com",
+  messagingSenderId: "334612760817"
+};
 
 @NgModule({
   declarations: [
@@ -40,6 +52,8 @@ import { QuestionDataProvider } from '../providers/question-data/question-data';
     FormsModule,
      HttpModule,
     JsonpModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot()
   ],

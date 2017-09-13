@@ -1,17 +1,108 @@
 {
     "questions": {
       "name": "invertview_question",
-      "questionCount": 27,
+      "questionCount": 31,
       "version":1,
       "type": [
         {
           "name": "OOP",
           "type":4,
+          "question_count": 1,
           "questions": [
             {
               "index": 22,
               "question" : "Write basic concepts of OOPS?",
               "answer": "Following are the concepts of OOPS and are as follows:<br/> <b>1. Abstraction.</b><br/>  <b>2. Encapsulation.</b><br/> <b>3. Inheritance.</b><br/>  <b>4. Polymorphism.</b>",
+              "favorite":false,
+              "has_video": false,
+              "has_code": false,
+              "code_txt": "",
+              "video_url": "" 
+            },
+            {
+              "index": 31,
+              "question" : " What is an inner class?",
+              "answer": " Inner class is a class defined inside other class and act like a member of the enclosing class.",
+              "favorite":false,
+              "has_video": false,
+              "has_code": false,
+              "code_txt": "",
+              "video_url": "" 
+            },
+            {
+              "index": 32,
+              "question" : " Abstract class in Java?",
+              "answer": " An abstract class is a class which cannot be instantiated. An abstract class is used by creating an inheriting subclass that can be instantiated. An abstract class does a few things for the inheriting subclass:",
+              "favorite":false,
+              "has_video": false,
+              "has_code": false,
+              "code_txt": "",
+              "video_url": "" 
+            },
+            {
+              "index": 33,
+              "question" : " Difference between abstract class and interface in Java?",
+              "answer": " This is the most important and one of the classic Java Interview question. I don’t know, how many times I have seen this question at all most all levels of Java interviews. One reason, which makes this question interesting is ability to produce example. It’s easy to answers questions on core OOPS concepts like Abstraction, Encapsulation, Polymorphism and Inheritance, but when it comes to subtle points like this, candidate more often fumbled. You can see this post for all syntactical difference between abstract class and interface, but it deserve a post on it’s own.",
+              "favorite":false,
+              "has_video": false,
+              "has_code": false,
+              "code_txt": "",
+              "video_url": "" 
+            },
+            {
+              "index": 34,
+              "question" : " Aggregation vs Composition",
+              "answer": " <b>Aggregation</b> implies a relationship where the child can exist independently of the parent. Example: Class (parent) and Student (child). Delete the Class and the Students still exist.<br/><b>Composition</b> implies a relationship where the child cannot exist independent of the parent. Example: House (parent) and Room (child). Rooms don't exist separate to a House.",
+              "favorite":false,
+              "has_video": false,
+              "has_code": false,
+              "code_txt": "",
+              "video_url": "" 
+            },
+            {
+              "index": 35,
+              "question" : " What is Encapsulation?",
+              "answer": " Encapsulation is an attribute of an object, and it contains all data which is hidden. That hidden data can be restricted to the members of that class.",
+              "favorite":false,
+              "has_video": false,
+              "has_code": false,
+              "code_txt": "",
+              "video_url": "" 
+            },
+            {
+              "index": 36,
+              "question" : "What is Polymorphism?",
+              "answer": " Polymorphism is nothing butassigning behavior or value in a subclass to something that was already declared in the main class. Simply, polymorphism takes more than one form.",
+              "favorite":false,
+              "has_video": false,
+              "has_code": false,
+              "code_txt": "",
+              "video_url": "" 
+            },
+            {
+              "index": 37,
+              "question" : "What is Inline function?",
+              "answer": " Inline function is a technique used by the compilers and instructs to insert complete body of the function wherever that function is used in the program source code.",
+              "favorite":false,
+              "has_video": false,
+              "has_code": false,
+              "code_txt": "",
+              "video_url": "" 
+            },
+            {
+              "index": 38,
+              "question" : "What is function overloading?",
+              "answer": " Function overloading is defined as a normal function, but it has the ability to perform different tasks. It allowscreation of several methods with the same name which differ from each other by type of input and output of the function.<br/>Example<br/>void add(int a, int b);<br/>void add(double a, double b);<br/>void add(float bob a,  float  b);",
+              "favorite":false,
+              "has_video": false,
+              "has_code": false,
+              "code_txt": "",
+              "video_url": "" 
+            },
+            {
+              "index": 39,
+              "question" : " What is method overriding?",
+              "answer": " Method overriding is a feature that allows sub class to provide implementation of a method that is already defined in the main class. This will overrides the implementation in the superclass by providing the same method name, same parameter and same return type.",
               "favorite":false,
               "has_video": false,
               "has_code": false,
@@ -23,6 +114,7 @@
         {
           "name": "Java Scripts",
           "type":4,
+          "question_count": 3,
           "questions": [
             {
               "index": 28,
@@ -61,6 +153,7 @@
         {
           "name": "J2EE",
           "type": 1,
+          "question_count": 10,
           "questions": [
             
             {
@@ -169,6 +262,7 @@
         {
           "name": "Hibernate",
           "type":2,
+          "question_count": 10,
           "questions": [
             {
               "index": 11,
@@ -275,6 +369,7 @@
         {
           "name": "DataBase",
           "type":3,
+          "question_count": 3,
           "questions": [
             {
               "index": 21,
@@ -311,6 +406,7 @@
         {
           "name": "Design Partten",
           "type":4,
+          "question_count": 4,
           "questions": [
             {
               "index": 25,
