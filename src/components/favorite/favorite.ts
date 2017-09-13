@@ -107,8 +107,11 @@ export class FavoriteComponent {
     
   }
 
-  shareQuestion(type, item){
-    this.socialSharing.share(  item.question + "  <br/> " + item.answer       , "Interview Question  " + type , null); 
+  shareQuestion( item, type){
+    console.log(type),
+    console.log(item.answer);
+    console.log(item.question);
+    this.socialSharing  .share(  item.question + "  <br/> " + item.answer       , "Interview Question  " + type , null); 
   }
 
   videoURL(item){

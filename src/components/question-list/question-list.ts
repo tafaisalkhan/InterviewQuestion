@@ -78,8 +78,8 @@ export class QuestionListComponent {
   }
 
   shareQuestion(index, type, item){
- 
-    this.socialSharing.share(  this.item.question + "  <br/> " + this.item.answer       , "Interview Question  " + this.name , null); 
+    console.log(item);
+    this.socialSharing.share(  item.question + "  <br/> " + item.answer       , "Interview Question  " + type  , null); 
   }
 
  

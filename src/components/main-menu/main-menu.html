@@ -36,8 +36,11 @@
                     -->
                     <ion-card-content   [ngClass]="platform=='small'? 'small-font' : 'large-font'">
                         <ion-item  [ngClass]="platform=='small'? 'small-font' : 'large-font'">
-                   
-                        {{item.name}} 
+                          <div [ngClass]="platform=='small'? 'small-font' : 'large-font'">
+
+                            {{item.name}} 
+                          </div>
+                       
                        
                      
                     </ion-item>

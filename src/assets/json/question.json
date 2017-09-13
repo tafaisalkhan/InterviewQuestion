@@ -1,7 +1,7 @@
 {
     "questions": {
       "name": "invertview_question",
-      "questionCount": 31,
+      "questionCount": 39,
       "version":1,
       "type": [
         {
@@ -404,7 +404,7 @@
           ]
         },
         {
-          "name": "Design Partten",
+          "name": "Design Design Patterns",
           "type":4,
           "question_count": 4,
           "questions": [

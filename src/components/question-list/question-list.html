@@ -22,7 +22,7 @@
         
              <ion-card-header style="padding: 0px; " [ngClass]="platform=='small'? 'detail-small-font' : 'detail-large-font'">
                 <ion-toolbar  [ngClass]="platform=='small'? 'detail-small-font' : 'detail-large-font'">
-                    <ion-buttons start  (tap)="shareQuestion(item.index, type, item)">
+                    <ion-buttons start  (tap)="shareQuestion(item.index, name, item)">
                         <button ion-button icon-only >
                             <ion-icon name="share"></ion-icon>
                           
