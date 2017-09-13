@@ -7,6 +7,7 @@ import { NativeAudio } from '@ionic-native/native-audio';
 import { IonicStorageModule } from '@ionic/storage';
 import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';
 import { SocialSharing } from '@ionic-native/social-sharing';
+import { VideoPlayer } from '@ionic-native/video-player';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { FormsModule }    from '@angular/forms';
 import { MyApp } from './app.component';
@@ -59,6 +60,7 @@ import { QuestionDataProvider } from '../providers/question-data/question-data';
     NativeAudio,
     Media,
     AdMobFree,
+    VideoPlayer,
     SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     InterviewConstantProvider,

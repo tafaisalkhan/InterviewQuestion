@@ -5,11 +5,10 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 import { NativeAudio } from '@ionic-native/native-audio';
 import { Media, MediaObject } from '@ionic-native/media';
 import { Observable } from 'rxjs/Observable';
-
 import { InterviewServiceProvider } from '../../providers/interview-service/interview-service';
-
 import { InterviewConstantProvider } from '../../providers/interview-constant/interview-constant';
 import {QuestionDataProvider } from '../../providers/question-data/question-data';
+import {SafeResourceUrl, DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'favorite',
@@ -22,7 +21,7 @@ export class FavoriteComponent {
   sizeStore: string = "normal";
   itemsQuestion: any =[];
   itemsFavoite: QuestionDataProvider[] =[];
-    constructor(private questionData: QuestionDataProvider, private interviewServiceProvider: InterviewServiceProvider, public navParams: NavParams, public actionSheetCtrl: ActionSheetController, private storage: Storage, private socialSharing: SocialSharing, private interviewConstantProvider: InterviewConstantProvider ) 
+    constructor(public domSanitizer: DomSanitizer, private questionData: QuestionDataProvider, private interviewServiceProvider: InterviewServiceProvider, public navParams: NavParams, public actionSheetCtrl: ActionSheetController, private storage: Storage, private socialSharing: SocialSharing, private interviewConstantProvider: InterviewConstantProvider ) 
     {
       
       this.loadData();
@@ -112,6 +111,14 @@ export class FavoriteComponent {
     this.socialSharing.share(  item.question + "  <br/> " + item.answer       , "Interview Question  " + type , null); 
   }
 
+  videoURL(item){
+    console.log(item.video_url);
+    if(item.video_url != "" || item.video_url != undefined){
+      return this.domSanitizer.bypassSecurityTrustResourceUrl(item.video_url);
+    }
+   
+   
+  }
 
   }
   

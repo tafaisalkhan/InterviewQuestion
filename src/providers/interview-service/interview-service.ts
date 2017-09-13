@@ -22,4 +22,11 @@ export class InterviewServiceProvider {
  
      }
 
+     getFile(filePath: string){
+            return this.http.get(filePath)
+            .map((res:Response) => res.text())
+            
+              .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+     }
+
 }

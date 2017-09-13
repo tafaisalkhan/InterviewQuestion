@@ -24,7 +24,7 @@ export class MainMenuComponent {
   }
 
 loadDua(){
-    //this.storage.set('questionList', null);
+    this.storage.set('questionList', null);
     this.storage.get('questionList').then((val) => {
       if (val != null){
         this.dataList =  val;

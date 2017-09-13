@@ -6,6 +6,7 @@ import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';
 import { Storage } from '@ionic/storage';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { Observable } from 'rxjs/Observable';
+import {SafeResourceUrl, DomSanitizer} from '@angular/platform-browser';
 
 
 @Component({
@@ -19,10 +20,12 @@ export class QuestionListComponent {
   sizeStore: string = "normal";
   type: string ;
   name: string;
-  constructor(public navParams: NavParams, public navCtrl: NavController, private questionServiceProvider: InterviewServiceProvider, private storage: Storage,  private questionConstantProvider: InterviewConstantProvider, private admobFree: AdMobFree, private socialSharing: SocialSharing ) {
+  fileTxt: string = "";
+  constructor(public domSanitizer: DomSanitizer, public navParams: NavParams, public navCtrl: NavController, private questionServiceProvider: InterviewServiceProvider, private storage: Storage,  private questionConstantProvider: InterviewConstantProvider, private admobFree: AdMobFree, private socialSharing: SocialSharing ) {
     this.item = this.navParams.get('item');
     this.name = this.item.name;
     this.type = this.item.type;
+    console.log(this.item);
    
     this.loadQuestion();
   
@@ -49,6 +52,7 @@ export class QuestionListComponent {
       }
     });
 
+    
    
     console.log(this.item);
 
@@ -78,4 +82,12 @@ export class QuestionListComponent {
     this.socialSharing.share(  this.item.question + "  <br/> " + this.item.answer       , "Interview Question  " + this.name , null); 
   }
 
+ 
+  videoURL(item){
+    console.log(item);
+    
+    return this.domSanitizer.bypassSecurityTrustResourceUrl(item.video_url);
+   
+  }
+  
 }
