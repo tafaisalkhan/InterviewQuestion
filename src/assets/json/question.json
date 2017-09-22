@@ -1,8 +1,8 @@
 {
     "questions": {
       "name": "invertview_question",
-      "questionCount": 39,
-      "version":1,
+      "questionCount": 43,
+      "version":2,
       "type": [
         {
           "name": "OOP",
@@ -103,6 +103,16 @@
               "index": 39,
               "question" : " What is method overriding?",
               "answer": " Method overriding is a feature that allows sub class to provide implementation of a method that is already defined in the main class. This will overrides the implementation in the superclass by providing the same method name, same parameter and same return type.",
+              "favorite":false,
+              "has_video": false,
+              "has_code": false,
+              "code_txt": "",
+              "video_url": "" 
+            },
+            {
+              "index": 40,
+              "question" : "Wht String is immutable?  ",
+              "answer": " <b>Security:</b> parameters are typically represented as String in network connections, database connection urls, usernames/passwords etc. If it were mutable, these parameters could be easily changed.<br/><b>Synchronization and concurrency:</b> making String immutable automatically makes them thread safe thereby solving the synchronization issues.<br/><b>Caching:</b> when compiler optimizes your String objects, it sees that if two objects have same value (a='test', and b='test') and thus you need only one string object (for both a and b, these two will point to the same object).<br/><b>Class loading:</b> String is used as arguments for class loading. If mutable, it could result in wrong class being loaded (because mutable objects change their state).",
               "favorite":false,
               "has_video": false,
               "has_code": false,
@@ -256,6 +266,26 @@
               "has_code": false,
               "code_txt": "",
               "video_url": "" 
+            },
+            {
+              "index": 42,
+              "question" : "Different between String and String new ('');",
+              "answer": "new String('text'); explicitly creates a new and referentially distinct instance of a String object; String s = 'text'; may reuse an instance from the string constant pool if one is available.",
+              "favorite":false,
+              "has_video": false,
+              "has_code": false,
+              "code_txt": "",
+              "video_url": "" 
+            },
+            {
+              "index": 43,
+              "question" : "Does Java pass by reference or by value?  ",
+              "answer": "Java passes everything by value, and not by reference – make sure you remember that. And when we say everything, we mean everything – objects, arrays (which are objects in Java), primitive types (like ints and floats), ",
+              "favorite":false,
+              "has_video": false,
+              "has_code": false,
+              "code_txt": "",
+              "video_url": "" 
             }
           ]
         },
@@ -395,6 +425,16 @@
               "index": 24,
               "question" : " What are the different type of SQL's statements ?",
               "answer": "This is one of the most frequently asked SQL Interview Questions for freshers. SQL statements are broadly classified into three. They are <br/> <b> DDL – Data Definition Language: </b> DDL is used to define the structure that holds the data. For example, Create, Alter, Drop and Truncate table. <br/> <b> 2. DML – Data Manipulation Language: </b> DML is used for manipulation of the data itself. Typical operations are Insert, Delete, Update and retrieving the data from the table. The Select statement is considered as a limited version of the DML, since it can't change the data in the database. But it can perform operations on data retrieved from the DBMS, before the results are returned to the calling function. <br/> <b> DCL – Data Control Language: </b>  DCL is used to control the visibility of data like granting database access and set privileges to create tables, etc. Example - Grant, Revoke access permission to the user to access data in the database. ",
+              "favorite":false,
+              "has_video": false,
+              "has_code": false,
+              "code_txt": "",
+              "video_url": "" 
+            },
+            {
+              "index": 41,
+              "question" : " Different between MYISAM Vs INNODB  ?",
+              "answer": "<b>MYISAM:</b><br/>2.MyISAM designed for need of speed<br/>3.MyISAM does not support foreign keys hence we call MySQL with MYISAM is DBMS<br/>4.MyISAM stores its tables, data and indexes in diskspace using separate three different files. (tablename.FRM, tablename.MYD, tablename.MYI)<br/>MYISAM not supports transaction. You cannot commit and rollback with MYISAM. Once you issue a command it’s done.<br/>MYISAM supports fulltext search<br/>You can use MyISAM, if the table is more static with lots of select and less update and delete.<br/><br/><b>INNODB:</b><br/>1.InnoDB supports Row-level Locking<br/>2.InnoDB designed for maximum performance when processing high volume of data<br/>3.InnoDB support foreign keys hence we call MySQL with InnoDB is RDBMS<br/>4.InnoDB stores its tables and indexes in a tablespace<br/>5.InnoDB supports transaction. You can commit and rollback with InnoDB",
               "favorite":false,
               "has_video": false,
               "has_code": false,
